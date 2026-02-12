@@ -12,4 +12,4 @@ Parse seluruh input ke tipe data yang sesuai
 Hitung:
 integer × double
 Jika nilai boolean adalah false, hasil dikali -1
-Cetak hasil dengan 2 digit di belakang koma
+
