@@ -3,5 +3,13 @@ coba buat jika program menerima overflow
 apa saja contoh lain selain menggunakan long, BigInteger, atau try-catch untuk mendeteksi overflow
 cara menjumlahkan dua tipe  float double
 cara membuat agar outputnya 6 dibelakang koma
-
-
+coba buat code java yang  Float vs Double Precision Trap dengan Baca dua bilangan desimal dengan menjumlahkan keduanya menggunakan float,Jumlahkan keduanya menggunakan double,Hitung selisih absolut dari kedua hasil tersebut,Output harus ditampilkan dengan 6 digit di belakang koma
+Tolong jelaskan soal Primitive vs Wrapper Comparison di Java, mengapa hasil perbandingan a == b dan a.equals(b) menjadi false setelah a ditambah 1, lengkap dengan contoh kode dan penjelasan sederhananya.
+buatlah code untuk String Immutability & Reference untuk Baca satu string S
+Tolong buat Parsing & Type Safety dengan Baca satu bilangan bulat, satu bilangan desimal, dan satu boolean.
+dengan cara
+Parse seluruh input ke tipe data yang sesuai
+Hitung:
+integer × double
+Jika nilai boolean adalah false, hasil dikali -1
+Cetak hasil dengan 2 digit di belakang koma

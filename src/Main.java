@@ -1,62 +1,59 @@
-// soal 1
-import java.util.*;
+// Nama : Jaya Bestina Simbolon
+// Nim : 12S24023
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
-        String soal = sc.nextLine();
 
-        if (soal.equals(soal1));
+        String soal = sc.next(); 
 
-        int a = input.nextint();
-        int b = input.nextint():
+        
+        // SOAL 1 — Integer Overflow
+        
+        if (soal.equals("Soal1")) {
 
-        boolean overflow = false;
+            int x = sc.nextInt();
+            int y = sc.nextInt();
 
-        nt a = input.nextInt();
-            int b = input.nextInt();
+            // Cek overflow sebelum menjumlah
+            if ((y > 0 && x > Integer.MAX_VALUE - y) ||
+                (y < 0 && x < Integer.MIN_VALUE - y)) {
 
-            boolean overflow = false;
-
-            if (a > 0 && b > 0 && a > Integer.MAX_VALUE - b) {
-                overflow = true;
-            }
-            else if (a < 0 && b < 0 && a < Integer.MIN_VALUE - b) {
-                overflow = true;
-            }
-
-            if (overflow) {
                 System.out.println("OVERFLOW");
+
             } else {
-                System.out.println(a + b);
+                System.out.println(x + y);
             }
-
         }
 
+        
+        // SOAL 2 — Float vs Double
+       
+        else if (soal.equals("Soal2")) {
 
-// soal 2
+            double x = sc.nextDouble();
+            double y = sc.nextDouble();
 
-else if (soal.equals("soal2")){
+            float xf = (float) x;
+            float yf = (float) y;
 
-    float a = input.nextFloat();
-    float b = input.nextFloat();
+            float sumFloat = xf + yf;
+            double sumDouble = x + y;
 
-    float hasilFloat = x + y;
-            double hasilDouble = (double) x + (double) y;
+            double diff = Math.abs(sumDouble - sumFloat);
 
-            double selisih = Math.abs(hasilDouble - hasilFloat);
-
-            System.out.printf("%.6f\n", selisih);
-
+            System.out.printf("%.6f\n", diff);
         }
 
-}
+        
+        // SOAL 3 — Primitive vs Wrapper
+        
+        else if (soal.equals("Soal3")) {
 
-
-// soal 3
-else if (soal 3 ) {
-
-            int n = input.nextInt();
+            int n = sc.nextInt();
 
             Integer a = n;
             Integer b = a;
@@ -65,15 +62,14 @@ else if (soal 3 ) {
 
             System.out.println("==: " + (a == b));
             System.out.println("equals: " + a.equals(b));
-
         }
 
+        
+        // SOAL 4 — String Immutability
+        
+        else if (soal.equals("Soal4")) {
 
-// soal 4
-
-else if (soal.equals("Soal4")) {
-
-            String s = input.next();
+            String s = sc.next();
 
             String a = s;
             String b = new String(s);
@@ -82,28 +78,34 @@ else if (soal.equals("Soal4")) {
 
             System.out.println("==: " + (a == b));
             System.out.println("equals: " + a.equals(b));
-
         }
 
+        
+        // SOAL 5 — Parsing & Type Safety
+       
+        else if (soal.equals("Soal5")) {
 
-// soal 5
-
-else if (soal.equals("Soal5")) {
-
-            String intStr = input.next();
-            String doubleStr = input.next();
-            String boolStr = input.next();
+            String intStr = sc.next();
+            String doubleStr = sc.next();
+            String boolStr = sc.next();
 
             int i = Integer.parseInt(intStr);
             double d = Double.parseDouble(doubleStr);
-            boolean b = Boolean.parseBoolean(boolStr);
+            boolean flag = Boolean.parseBoolean(boolStr);
 
-            double hasil = i * d;
+            double result = i * d;
 
-            if (b == false) {
-                hasil = hasil * -1;
+            if (!flag) {
+                result *= -1;
             }
 
-            System.out.printf("%.2f\n", hasil);
-
+            System.out.printf("%.2f\n", result);
         }
+
+        else {
+            System.out.println("Soal tidak dikenali");
+        }
+
+        sc.close();
+    }
+}
